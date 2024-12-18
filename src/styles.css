@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "fruktur_1";
+    font-weight: 700;
+    font-style: normal;
+    src: url('../assets/fonts/fruktur-regular-webfont.woff2') format('woff2'),
+        url('../assets/fonts/fruktur-regular-webfont.woff') format('woff')
+
+}
+
+@font-face {
+    font-family: "fruktur_2";
+    font-weight: 500;
+    font-style: italic;
+    src: url('../assets/fonts/fruktur-italic-webfont.woff2') format('woff2'),
+        url('../assets/fonts/fruktur-italic-webfont.woff') format('woff')
+
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    font-family: 'fruktur_2';
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'fruktur_1';
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 700;
+}
