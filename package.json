@@ -32,7 +32,8 @@
     "@mui/material": "^6.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "vivus": "^0.4.6"
   },
   "browserslist": {
     "production": [

@@ -33,3 +33,16 @@ p {
     line-height: 1.5;
     font-weight: 700;
 }
+
+#first_line {
+    stroke-dasharray: 666.8563842773438;
+    stroke-dashoffset: 666.8563842773438;
+    animation: sign 4s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
