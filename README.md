@@ -1,5 +1,5 @@
-# Draw That!
+# NoteTube!
 
 ## Overview
 
-A game where you draw a randomly generated item. Challenges are generated, points are awarded, memories are made. 
+Find relevant youtube videos to learn the content in your notes.
