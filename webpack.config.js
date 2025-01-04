@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 var path = require('path');
 
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -8,6 +9,7 @@ module.exports = {
         filename: 'main.js',
     },
     module: {
+        
         rules: [
             {
                 test: /\.(js|jsx)$/,

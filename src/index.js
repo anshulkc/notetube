@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
-import DrawThat from './App';
+import MainPage from './App.js';
 
 
 const root = createRoot(document.getElementById('root'));
-root.render(<DrawThat />);
+root.render(<MainPage />);
 
 
 
