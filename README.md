@@ -2,4 +2,4 @@
 
 ## Overview
 
-Learn your notes with YouTube.
+Learn your notes with Youtube.
