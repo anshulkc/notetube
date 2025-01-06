@@ -15,7 +15,8 @@ function MainPage() {
                         whiteSpace: 'pre-line',
                         display: 'flex',
                         justifyContent: 'center',
-                        paddingTop: '50%',
+                        textAlign: 'center',
+                        paddingTop: '30%',
                         fontSize: '80px',
                         backgroundImage: 'linear-gradient(to right, #f9d030, #f62aa0, #b8ee30)', // creates the linear gradient
                         WebkitBackgroundClip: 'text', // clips to just text
@@ -31,8 +32,11 @@ function MainPage() {
                         whiteSpace: 'pre-line',
                         display: 'flex',
                         justifyContent: 'center',
+                        textAlign: 'center',
                         fontSize: '30px',
-                        paddingTop: '2%',
+                        paddingTop: '4%',
+                        paddingLeft: '10%',
+                        paddingRight: '10%',
                         backgroundImage: 'linear-gradient(to right, #f9d030, #f62aa0, #b8ee30)', // creates the linear gradient
                         WebkitBackgroundClip: 'text', // clips to just text
                         WebkitTextFillColor: 'transparent' // fills the gradient to the clip
@@ -40,7 +44,7 @@ function MainPage() {
                         
             
                     }}>
-                        {'Find YouTube videos that comprehensively\ncover the content of your notes.'}
+                        {'Find YouTube videos that comprehensively cover the content of your notes.'}
                     </h2>
                 </div>
             </div>
