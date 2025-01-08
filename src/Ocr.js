@@ -5,9 +5,6 @@ import 'dotenv/config';
 import Exa from "exa-js";
 import fs from 'fs';
 
-
-
-
 const openaiKey = process.env.OPENAI_API_KEY
 const openai = new OpenAI({ apiKey: openaiKey });
 
