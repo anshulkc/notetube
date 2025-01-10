@@ -14,10 +14,14 @@ export function FileUpload() {
                body: formData
            });
            const data = await response.json();
+           setFullPath(path.join(__dirname, req.file.path));
            console.log('Success: ', data);
+           // call the ocr function
        }  catch (error) {
            console.log('did not work: ', error);
        }
+
+       
 
    };
   

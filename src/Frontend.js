@@ -4,6 +4,21 @@ import { FileUpload } from './FileUpload.js'
 
 export function FrontPage() {
 
+    const [fullPath, setFullPath] = useState('');
+
+    const toBase64 = async (filePath) => {
+        try {
+            // Read the file as a buffer
+            const fileBuffer = fs.readFileSync(filePath);
+            // Convert buffer to base64
+            const base64String = fileBuffer.toString('base64');
+            // data url  MIME type encoding method  encoding data
+            return `data:image/png;base64,${base64String}`;
+        } catch (error) {
+            throw new Error(`Error converting file to base64: ${error.message}`);
+        }
+    };
+
 
     return (
         <div className='row'>
@@ -61,10 +76,8 @@ export function FrontPage() {
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}> Upload your lecture notes </h1>
-                    <FileUpload />
+                    <FileUpload setFullPath={setFullPath}/>
                     
-                  
-
                     </div>
 
                     
