@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button} from '@mui/material'
 
-export function FileUpload() {
+export function FileUpload( { onSuccessfulUpload } ) {
    const [file, setFile] = useState(null);
    const handleSubmit = async (e) => {
        e.preventDefault();
@@ -9,19 +9,24 @@ export function FileUpload() {
        formData.append('avatar', file);
 
        try {
-           const response = await fetch('http://localhost:3001/api/upload', {
+        const response = await fetch('http://localhost:3001/api/upload', {
                method: 'POST',
                body: formData
            });
            const data = await response.json();
-           setFullPath(path.join(__dirname, req.file.path));
            console.log('Success: ', data);
-           // call the ocr function
-       }  catch (error) {
-           console.log('did not work: ', error);
-       }
 
-       
+           
+           const process_image = await fetch('http://localhost:3001/process-image', {
+            method: 'POST',
+            body: formData
+           });
+           const image_data = await process_image.json()
+           console.log('Success: ', image_data);
+           onSuccessfulUpload(image_data);
+       }  catch (error) {
+           console.log('Did not work: ', error);
+       }
 
    };
   

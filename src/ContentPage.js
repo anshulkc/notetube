@@ -1,21 +1,17 @@
 import { React } from 'react';
-import { FileUpload } from './FileUpload'
+import { FileUpload } from './FileUpload.js'
 
-export function ContentPage() {
-    const [prompts, setPrompts] = useState([]);
-    const [urlMap, setUrlMap] = useState(new Map([]));
+export function ContentPage( { handleSuccessfulUpload, prompts, urlMap }) {
+    
 
-    const handleSuccessfulUpload = (data) => {
-        setPrompts(data.questions);
-        setUrlMap(new Map(Object.entries(data.urlMap)));
-    }
 
     return (
         <div className='grey-column'>
             <h1>Content</h1>
             <h1>(sorted by relevance)</h1>
-            <
-
+            <FileUpload onSuccessfulUpload={handleSuccessfulUpload}/>
+            {console.log(urlMap)}
+            {console.log(prompts)}
             <ul>
                 {prompts.map((prompt) => (
                     <li key={prompt}>

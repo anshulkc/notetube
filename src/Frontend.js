@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import  './styles.css'
 import { FileUpload } from './FileUpload.js'
 
-export function FrontPage() {
-
-    const [fullPath, setFullPath] = useState('');
+export function FrontPage( { handleSuccessfulUpload }) {
 
     const toBase64 = async (filePath) => {
         try {
@@ -76,7 +74,7 @@ export function FrontPage() {
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}> Upload your lecture notes </h1>
-                    <FileUpload setFullPath={setFullPath}/>
+                    <FileUpload onSuccessfulUpload={handleSuccessfulUpload}/>
                     
                     </div>
 
