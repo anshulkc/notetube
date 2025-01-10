@@ -6,7 +6,6 @@ import {
     CardHeader,
 } from '@mui/material';
 import './styles.css'
-import Vivus from "vivus";
 
 function BasicCard() {
 

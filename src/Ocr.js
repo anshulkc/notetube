@@ -11,6 +11,10 @@ const openai = new OpenAI({ apiKey: openaiKey });
 const exaaiKey = process.env.EXA_API_KEY
 const exa = new Exa(exaaiKey);
 
+const delay = (ms) => {
+    new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const toBase64 = async (filePath) => {
     try {
         // Read the file as a buffer
@@ -62,7 +66,7 @@ const test = async () => {
               {
                   role: 'user',
                   content: `Here are the notes: ${first_response.choices[0].message.content}.
-                  Generate a comprehensive list of topics (numbered) based on what is covered in the notes.`
+                  Create a numbered list of topics based on what is covered in the notes.`
               },
           ],
       });
@@ -74,22 +78,41 @@ const test = async () => {
       }
 
       const topics_string = response.choices[0].message.content;
-  
-        const result = await exa.search(
-        `Find the most relevant youtube videos for each of the following topics: ${topics_string}, THEY MUST BE YOUTUBE LINKS:`,
+      const questions = topics_string.split("\n");
 
-        {
-            type: "neural",
-            numResults: 5 // in the future, could change to be user-chosen
-        }
+      async function exaSearch() {
+        for (const question of questions) {
+            try {
+                const result = await exa.search(
+                    `Find the most relevant youtube videos for the following topic: ${question}, THEY MUST BE YOUTUBE LINKS:`,
+            
+                    {
+                        type: "neural",
+                        numResults: 2 // in the future, could change to be user-chosen
+                    }
+                );
 
+                const exa_json = result.results;
+                console.log(question);
+
+                for (const output of exa_json) {
+                    console.log(output.url);
+                    await delay(200);
+                }
+                console.log("------");
+                    
+            } catch (error) {
+                if (error.message.includes('429')) {
+                    console.log('Rate limit reached, wait 1 second before requesting again')
+                }
+                await delay(1000);
+                return exaSearch();
+            }
+          }
+      }
+
+      exaSearch();
         
-        );
-
-
-        result.results.forEach(result => {
-            console.log(result.url);
-        });
   } catch (error) {
       console.error("Error generating api request with OpenAI", error);
   }
