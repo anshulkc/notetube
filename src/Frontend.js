@@ -69,7 +69,7 @@ export function FrontPage( { handleSuccessfulUpload }) {
                     }}>
                     <h1 style= {{
                         fontSize: '30px',
-                        paddingBottom: '2%',
+                        paddingBottom: '1%',
                         backgroundImage: 'linear-gradient(to right, #26dfd0, #b8ee30, #f62aa0, #f9d030',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'

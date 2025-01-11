@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button} from '@mui/material'
+// import {Button} from '@mui/material'
 
 export function FileUpload( { onSuccessfulUpload } ) {
    const [file, setFile] = useState(null);
@@ -32,11 +32,18 @@ export function FileUpload( { onSuccessfulUpload } ) {
   
    return (
        <form onSubmit={handleSubmit}>
+        <label for="file-upload" class="btn input zoom-out zoom-out--purple">
+            
+        Select File
+    </label>
            <input
+           id="file-upload"
                type="file"
                onChange={(e) => setFile(e.target.files[0])}
+               style={{ color: 'transparent' }}
+               
            />
-           <Button type="submit" variant="outlined">Upload</Button>
+           <button class="btn zoom-out zoom-out--purple" type="submit" variant="outlined">Upload</button>
        </form>
    );
 }

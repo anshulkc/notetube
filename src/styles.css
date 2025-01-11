@@ -21,6 +21,53 @@
 @tailwind utilities;
 
 
+.btn {
+    font-family: 'fruktur_2';
+    text-transform: uppercase;
+  } 
+
+.input {
+    font-family: 'fruktur_2';
+    text-transform: uppercase;
+    padding-top: 12px;
+} 
+   
+  .btn:hover .btn-slide-show-text1 {
+    margin-left: 65px;
+  } 
+   
+  .zoom-out {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'fruktur_2';
+    text-align: center;
+    transition: 0.5s;
+    border: none;
+  } 
+   
+  .zoom-out:hover {
+    transform: scale(1.1);
+  } 
+   
+  .zoom-out--purple {
+    background: linear-gradient(to right, #f9d030, #f62aa0, #b8ee30);
+  } 
+
+  
+
+
+  input[type="file"] {
+  display: none;
+}
+
 html {
     color-scheme: dark light;
 }
@@ -38,6 +85,51 @@ h2 {
     line-height: 1.5;
     font-weight: 200;
 }
+
+ul {
+    font-family: 'fruktur_1';
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  li {
+    font-family: 'fruktur_1';
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(to right, rgba(249, 208, 48, 0.1), rgba(246, 42, 160, 0.1), rgba(184, 238, 48, 0.1));
+    transition: transform 0.2s ease;
+  }
+  
+  li:hover {
+    
+    transform: translateX(10px);
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .container a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    position: absolute;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  li p {
+    font-family: 'fruktur_1';
+    margin-top: 8px;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 
 p {
     font-family: 'fruktur_1';
@@ -64,9 +156,6 @@ p {
 .white-column {
     background-color: #0A1F2D;
     height: 100%;
-
-    
-    
 }
 
 .grey-column {
@@ -74,6 +163,13 @@ p {
     height: 100%;
     justify-content: center;  
     align-items: center;  
+}
+
+.mint-column {
+    background-color: #2A0845;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 
