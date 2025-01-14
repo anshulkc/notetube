@@ -12,6 +12,9 @@ import fs from 'fs';
 const app = express();
 app.use(cors());
 
+
+
+
 const openaiKey = process.env.OPENAI_API_KEY
 const openai = new OpenAI({ apiKey: openaiKey });
 

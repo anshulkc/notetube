@@ -58,11 +58,13 @@ export function ContentPage( { handleSuccessfulUpload, prompts, urlMap }) {
                         }}>{prompt}</ul>
                         <div className="container">
                             <div>
-                                <iframe width='560' height='315' src={urlMap.get(prompt)[0].replace("watch?v=", "embed/")} frameborder='0' allowfullscreen></iframe>
+                                <iframe width='560' height='315' src={urlMap.get(prompt)[0].replace("watch?v=", "embed/")} frameborder='0' allowfullscreen
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                 <a href={urlMap.get(prompt)[0]} target="_blank">Video 1</a>
                             </div>
                             <div>
-                                <iframe width='560' height='315' src={urlMap.get(prompt)[1].replace("watch?v=", "embed/")} frameborder='0' allowfullscreen></iframe>
+                                <iframe width='560' height='315' src={urlMap.get(prompt)[1].replace("watch?v=", "embed/")} frameborder='0' allowfullscreen
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                 <a href={urlMap.get(prompt)[1]} target="_blank">Video 2</a>
                             </div>
                         </div>
