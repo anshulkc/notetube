@@ -4,8 +4,22 @@ import  './styles.css'
 
 
 export function ContentPage( { handleSuccessfulUpload, prompts, urlMap }) {
-    
 
+    const VideoCard = ({ videoUrl, title }) => {
+        return (
+            <div className="p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                <a 
+                    href={videoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                >
+                    Watch Video
+                </a>
+            </div>
+        );
+    };
 
     return (
         <div className='mint-column'>
@@ -56,18 +70,16 @@ export function ContentPage( { handleSuccessfulUpload, prompts, urlMap }) {
                             WebkitTextFillColor: 'transparent'
                             
                         }}>{prompt}</ul>
-                        <div className="container">
-                            <div>
-                                <iframe width='560' height='315' src={urlMap.get(prompt)[0].replace("watch?v=", "embed/")} frameborder='0' allowfullscreen
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                                <a href={urlMap.get(prompt)[0]} target="_blank">Video 1</a>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <VideoCard 
+                            videoUrl={urlMap.get(prompt)[0]} 
+                            title="Video 1" 
+                        />
+                        <VideoCard 
+                            videoUrl={urlMap.get(prompt)[1]} 
+                            title="Video 2" 
+                         />
                             </div>
-                            <div>
-                                <iframe width='560' height='315' src={urlMap.get(prompt)[1].replace("watch?v=", "embed/")} frameborder='0' allowfullscreen
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                                <a href={urlMap.get(prompt)[1]} target="_blank">Video 2</a>
-                            </div>
-                        </div>
                     </li>
                 ))}
             </ul>
