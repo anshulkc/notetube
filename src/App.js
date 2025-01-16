@@ -3,7 +3,7 @@ import  './styles.css'
 import { FrontPage } from './Frontend.js'
 import { ContentPage } from './ContentPage.js'
 import { Frame } from './ImprovedLanding.js'
-
+import { ImprovedContentPage } from './ImprovedContentPage.js'
 
 function MainPage() {
 
@@ -22,7 +22,7 @@ function MainPage() {
     return (
         <>
             <Frame />
-
+            <ImprovedContentPage />
            {/* <FrontPage handleSuccessfulUpload={successfulUpload} /> */}
             {isImageUploaded && <ContentPage handleSuccessfulUpload={successfulUpload} prompts={prompts} urlMap={urlMap}/>}
         </>

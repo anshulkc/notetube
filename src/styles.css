@@ -186,134 +186,152 @@ p {
   height: 70vh;
   position: relative;
   width: 100vw;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px #00000040 !important;
 
 }
 
-
-
 .frame .overlap-group {
-  height: 175px;
-  left: 576px;
+  height: 140px;
+  left: calc(40vw + 170px);
+  transform: translate(-248px, -50%);
   position: absolute;
-  top: 98px;
-  width: 621px;
+  top: 35%;
+  width: 497px;
 }
 
 .frame .div {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 128px;
+  font-size: 102px;
   font-weight: 400;
   left: 0;
   letter-spacing: 0;
   line-height: 20px;
   position: absolute;
-  top: 78px;
-  width: 511px;
+  top: 45px;
+  width: 409px;
 }
 
 .frame .icons-logos-social-youtube {
-  height: 144px !important;
-  left: 477px !important;
-  width: 144px !important;
+  height: 95px !important;
+  left: 382px !important;
+  width: 115px !important;
+  position: absolute !important;
 }
 
 .frame .text-wrapper-2 {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 128px;
+  font-size: 102px;
   font-weight: 400;
-  left: 92px;
+  left: calc(40vw - 467px);
   letter-spacing: 0;
   line-height: 20px;
   position: absolute;
-  top: 169px;
-  width: 484px;
+  top: calc(35% - 35px);
+  width: 387px;
 }
 
 .frame .p {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 400;
-  left: 175px;
+  left: calc(40vw + 514px);
   letter-spacing: 0;
   line-height: 40px;
   position: absolute;
-  top: 351px;
-  width: 507px;
+  top: calc(35% - 85px);
+  width: 406px;
 }
 
 .frame .text-wrapper-3 {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 64px;
+  font-size: 51px;
   font-weight: 400;
-  left: 793px;
+  left: calc(40vw + 144px);
   letter-spacing: 0;
   line-height: 60px;
   position: absolute;
-  top: 317px;
-  width: 701px;
+  top: calc(35% + 84px);
+  width: 561px;
 }
 
 .frame .buttons-secondary-fixed-button {
-  height: 147px !important;
-  left: 861px !important;
+  height: 100px !important;
+  left: calc(40vw + 190px) !important;
   position: absolute !important;
-  top: 413px !important;
-  width: 338px !important;
+  top: calc(35% + 185px) !important;
+  width: 270px !important;
+  background-color: var(--x01-fill-03-soft) !important;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame .buttons-secondary-instance {
+  color: var(--x01-fill-01-dark);
   font-family: "Reenie Beanie", Helvetica !important;
-  font-size: 64px !important;
+  font-size: 51px !important;
   font-weight: 400 !important;
-  left: 56px !important;
-  top: 64px !important;
+  text-align: center;
+  position: relative;
+  top: 0px;
 }
 
 .frame .buttons-primary-fixed-button {
   background-color: var(--x01-fill-02-medium) !important;
-  height: 47px !important;
-  left: 1268px !important;
+  height: 45px !important;
+  left: calc(40vw + 530px) !important;
   position: absolute !important;
-  top: 513px !important;
-  width: 91px !important;
+  top: calc(35% + 215px) !important;
+  width: 75px !important;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame .buttons-primary-instance {
   color: var(--x01-fill-01-dark) !important;
   font-family: "Reenie Beanie", Helvetica !important;
-  font-size: 32px !important;
+  font-size: 26px !important;
   font-weight: 400 !important;
-  left: 12px !important;
-  top: 14px !important;
+  text-align: center;
+  position: relative;
+  top: 0px;
 }
 
 .frame .icons-primary {
-  height: 20px !important;
-  left: 1223px !important;
+  height: 16px !important;
+  left: calc(40vw + 488px) !important;
   position: absolute !important;
-  top: 527px !important;
-  width: 20px !important;
+  top: calc(35% + 230px) !important;
+  width: 16px !important;
 }
 
 .frame .overlap {
-  height: 133px;
-  left: 1281px;
+  height: 106px;
+  left: calc(40vw - 340px);
   position: absolute;
-  top: 49px;
-  width: 282px;
+  top: calc(35% + 95px);
+  width: 250px;
 }
 
 .frame .select-file-upload {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   left: 0;
-  letter-spacing: 0;
+  letter-spacing: 3px;
   line-height: 40px;
   position: absolute;
   text-align: center;
@@ -324,9 +342,9 @@ p {
 .frame .text-wrapper-4 {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 36px;
+  font-size: 39px;
   font-weight: 400;
-  left: 87px;
+  left: 70px;
   letter-spacing: 0;
   line-height: 40px;
   position: absolute;
@@ -417,4 +435,238 @@ a {
   --x01-fill-03-soft: rgba(209, 222, 253, 1);
   --x01-fill-04-softest: rgba(232, 239, 255, 1);
   --x01-fill-05-light: rgba(255, 255, 255, 1);
+}
+
+.frame form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-text {
+  color: #000000;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 60px;
+  text-align: center;
+  width: 306px;
+  position: fixed;
+  left: 50%;
+  top: 75vh;
+  transform: translateX(-50%);
+}
+
+.scroll-arrow {
+  font-size: 48px;
+  line-height: 48px;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.content-page {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30vh;
+}
+
+.content-page-div {
+  background-color: #f9f9f9;
+  height: 900px;
+  position: relative;
+  width: 1600px;
+  padding-top: 20px;
+}
+
+.content-page .overlap {
+  background-color: var(--x01-fill-03-soft);
+  height: 360px;
+  left: 170px;
+  position: absolute;
+  top: 128px;
+  width: 1264px;
+}
+
+.content-page .overlap-group {
+  height: 188px;
+  left: 217px;
+  position: absolute;
+  top: 124px;
+  width: 327px;
+}
+
+.content-page .media-video-background-01-standalone {
+  height: 187px !important;
+  width: 327px !important;
+}
+
+.content-page .text-wrapper {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 89px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 140px;
+  white-space: nowrap;
+  width: 149px;
+}
+
+.content-page .div-wrapper {
+  background-size: 100% 100%;
+  height: 187px;
+  left: 708px;
+  position: absolute;
+  top: 124px;
+  width: 327px;
+}
+
+.content-page .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 89px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 139px;
+  white-space: nowrap;
+  width: 149px;
+}
+
+.content-page .text-wrapper-3 {
+  color: #000000;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 328px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 28px;
+  width: 604px;
+}
+
+.content-page .overlap-group-2 {
+  background-color: var(--x01-fill-03-soft);
+  height: 360px;
+  left: 170px;
+  position: absolute;
+  top: 512px;
+  width: 1264px;
+}
+
+.content-page .overlap-2 {
+  background-size: 100% 100%;
+  height: 187px;
+  left: 217px;
+  position: absolute;
+  top: 108px;
+  width: 327px;
+}
+
+.content-page .overlap-3 {
+  background-size: 100% 100%;
+  height: 187px;
+  left: 708px;
+  position: absolute;
+  top: 108px;
+  width: 327px;
+}
+
+.content-page .text-wrapper-4 {
+  color: #000000;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 328px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 24px;
+  width: 604px;
+}
+
+.content-page .notes-videos-sorted {
+  color: #000000;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 315px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 48px;
+  white-space: nowrap;
+  width: 970px;
+}
+
+.video-card {
+  background-color: var(--x01-fill-05-light);
+  border-radius: 8px;
+  padding: 20px;
+  height: 187px;
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+  color: var(--x01-fill-01-dark);
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.video-link {
+  background-color: var(--x01-fill-02-medium);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 20px;
+  transition: background-color 0.2s;
+}
+
+.video-link:hover {
+  background-color: var(--x01-fill-01-dark);
 }
