@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import  './styles.css'
 import { FrontPage } from './Frontend.js'
 import { ContentPage } from './ContentPage.js'
+import { Frame } from './ImprovedLanding.js'
 
 
 function MainPage() {
@@ -20,7 +21,9 @@ function MainPage() {
 
     return (
         <>
-            <FrontPage handleSuccessfulUpload={successfulUpload} />
+            <Frame />
+
+           {/* <FrontPage handleSuccessfulUpload={successfulUpload} /> */}
             {isImageUploaded && <ContentPage handleSuccessfulUpload={successfulUpload} prompts={prompts} urlMap={urlMap}/>}
         </>
     );

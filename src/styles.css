@@ -16,11 +16,6 @@
 
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 .btn {
     font-family: 'fruktur_2';
     text-transform: uppercase;
@@ -184,4 +179,242 @@ p {
     to {
         stroke-dashoffset: 0;
     }
+}
+
+.frame {
+  background-color: var(--x01-fill-01-dark);
+  height: 70vh;
+  position: relative;
+  width: 100vw;
+
+}
+
+
+
+.frame .overlap-group {
+  height: 175px;
+  left: 576px;
+  position: absolute;
+  top: 98px;
+  width: 621px;
+}
+
+.frame .div {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 128px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 78px;
+  width: 511px;
+}
+
+.frame .icons-logos-social-youtube {
+  height: 144px !important;
+  left: 477px !important;
+  width: 144px !important;
+}
+
+.frame .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 128px;
+  font-weight: 400;
+  left: 92px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 169px;
+  width: 484px;
+}
+
+.frame .p {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  left: 175px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 351px;
+  width: 507px;
+}
+
+.frame .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 793px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  top: 317px;
+  width: 701px;
+}
+
+.frame .buttons-secondary-fixed-button {
+  height: 147px !important;
+  left: 861px !important;
+  position: absolute !important;
+  top: 413px !important;
+  width: 338px !important;
+}
+
+.frame .buttons-secondary-instance {
+  font-family: "Reenie Beanie", Helvetica !important;
+  font-size: 64px !important;
+  font-weight: 400 !important;
+  left: 56px !important;
+  top: 64px !important;
+}
+
+.frame .buttons-primary-fixed-button {
+  background-color: var(--x01-fill-02-medium) !important;
+  height: 47px !important;
+  left: 1268px !important;
+  position: absolute !important;
+  top: 513px !important;
+  width: 91px !important;
+}
+
+.frame .buttons-primary-instance {
+  color: var(--x01-fill-01-dark) !important;
+  font-family: "Reenie Beanie", Helvetica !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  left: 12px !important;
+  top: 14px !important;
+}
+
+.frame .icons-primary {
+  height: 20px !important;
+  left: 1223px !important;
+  position: absolute !important;
+  top: 527px !important;
+  width: 20px !important;
+}
+
+.frame .overlap {
+  height: 133px;
+  left: 1281px;
+  position: absolute;
+  top: 49px;
+  width: 282px;
+}
+
+.frame .select-file-upload {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 58px;
+  width: 282px;
+}
+
+.frame .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  left: 87px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 0;
+  width: 145px;
+}
+
+.icons-logos-social {
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.buttons-secondary {
+  background-color: #d1defc;
+  border-radius: 4px;
+  height: 56px;
+  position: relative;
+  width: 200px;
+}
+
+.buttons-secondary .label {
+  color: #0055ff;
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 82px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+  white-space: nowrap;
+}
+
+.buttons-primary {
+  background-color: #0055ff;
+  border-radius: 4px;
+  height: 56px;
+  position: relative;
+  width: 200px;
+}
+
+.buttons-primary .text-wrapper {
+  color: #ffffff;
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 82px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 18px;
+  white-space: nowrap;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie:400|Roboto:500");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --x01-fill-01-dark: rgba(0, 85, 255, 1);
+  --x01-fill-02-medium: rgba(123, 164, 255, 1);
+  --x01-fill-03-soft: rgba(209, 222, 253, 1);
+  --x01-fill-04-softest: rgba(232, 239, 255, 1);
+  --x01-fill-05-light: rgba(255, 255, 255, 1);
 }
