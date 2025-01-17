@@ -12,14 +12,16 @@ export function FileUpload({ onSuccessfulUpload }) {
        formData.append('avatar', file); // append the file to the form data
 
        try {
-           const response = await fetch('http://localhost:3001/api/upload', { // endpoint 1
+        // endpoint 1
+           const response = await fetch('http://localhost:3001/api/upload', { 
                method: 'POST',
                body: formData // send the form data to the server
            });
            const data = await response.json();
            console.log('Success: ', data);
            
-           const process_image = await fetch('http://localhost:3001/process-image', { //endpoint 2
+           //endpoint 2
+           const process_image = await fetch('http://localhost:3001/process-image', { 
                method: 'POST',
                body: formData // send the form data to the server
            });
