@@ -47,8 +47,11 @@ app.post('/process-image', upload.single('avatar'), async (req, res) => {
     throw new Error('OpenAI API key is not set');
 }
 
+const filePath = req.file.path;
 
-const imageBase64 = fs.readFileSync(req.file.path).toString('base64');
+let imageToProcess = filePath;
+
+const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
 
 
  try {
