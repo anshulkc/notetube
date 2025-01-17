@@ -101,7 +101,7 @@ const imageBase64 = fs.readFileSync(req.file.path).toString('base64');
       for (const question of questions) {
           try {
               const result = await exa.search(
-                  `Find the most relevant youtube videos for the following topic: ${question}, THEY MUST BE YOUTUBE LINKS:`,
+                  `Find the most relevant youtube videos for the following topic: ${question}, THEY MUST BE YOUTUBE LINKS and must have www.youtube.com in the url:`,
           
                   {
                       type: "neural",
@@ -118,7 +118,7 @@ const imageBase64 = fs.readFileSync(req.file.path).toString('base64');
 
               for (const output of exa_json) {
                   // take this url and turn it into a preview video on the website (loads in new tab)
-                  list_links.push(output.url)
+                  list_links.push([output.url, (output.title).split(' ').slice(0, 10).join(' ')])
                   await delay(200);
               }   
               urlMap.set(question, list_links)                 

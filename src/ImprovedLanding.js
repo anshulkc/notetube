@@ -4,11 +4,7 @@ import { IconsLogosSocial } from "./IconsLogosSocial.js";
 import { Icons1PrimaryArrowRight } from "./Icons1PrimaryArrowRight.js";
 import "./styles.css";
 
-export const Frame = () => {
-  const handleUploadSuccess = (data) => {
-    // Handle the upload success
-    console.log('Upload successful:', data);
-  };
+export const Frame = ({ handleSuccessfulUpload }) => {
 
   return (
     <>
@@ -28,10 +24,12 @@ export const Frame = () => {
         </p>
 
         <p className="text-wrapper-3">Upload your lecture notes below:</p>
+        <p className="text-wrapper-5">supports: png, jpg, gif, webp</p>
 
-        <FileUpload onSuccessfulUpload={handleUploadSuccess} />
+        <FileUpload onSuccessfulUpload={handleSuccessfulUpload} />
         
         <Icons1PrimaryArrowRight className="icons-primary" />
+        
         <div className="overlap">
           <p className="select-file-upload">
             1. select file
@@ -42,14 +40,14 @@ export const Frame = () => {
           </p>
           
 
-          <div className="text-wrapper-4">How to use:
-          <br />
-          </div>
+          <div className="text-wrapper-4">How to use:</div>
         </div>
       </div>
+      <div className="bottom-frame">
       <div className="scroll-text">
         Scroll for your notes
         <div className="scroll-arrow">↓</div>
+        </div>
       </div>
     </>
   );

@@ -52,38 +52,38 @@ export function ContentPage( { handleSuccessfulUpload, prompts, urlMap }) {
                         }}>
                          <FileUpload onSuccessfulUpload={handleSuccessfulUpload} />
                         </div>
-            <ul>
-                {prompts.map((prompt) => (
-                    <li key={prompt} style = {{
-                        paddingBottom: '5%'
-                    }}>
-                        <ul style = {{
-                            whiteSpace: 'pre-line',
-                            display: 'flex',
-                            paddingBottom: '2%',
-                            justifyContent: 'center',
-                            textAlign: 'center',
-                            fontSize: '32px',
-                            backgroundImage: 'linear-gradient(to right, #f9d030, #f62aa0, #b8ee30)',
-                            WebkitBackgroundClip: 'text',
-                            backgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent'
-                            
-                        }}>{prompt}</ul>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <VideoCard 
-                            videoUrl={urlMap.get(prompt)[0]} 
-                            title="Video 1" 
-                        />
-                        <VideoCard 
-                            videoUrl={urlMap.get(prompt)[1]} 
-                            title="Video 2" 
-                         />
-                            </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
+                            <ul>
+                                {prompts.map((prompt) => (
+                                    <li key={prompt} style = {{
+                                        paddingBottom: '5%'
+                                    }}>
+                                        <ul style = {{
+                                            whiteSpace: 'pre-line',
+                                            display: 'flex',
+                                            paddingBottom: '2%',
+                                            justifyContent: 'center',
+                                            textAlign: 'center',
+                                            fontSize: '32px',
+                                            backgroundImage: 'linear-gradient(to right, #f9d030, #f62aa0, #b8ee30)',
+                                            WebkitBackgroundClip: 'text',
+                                            backgroundClip: 'text',
+                                            WebkitTextFillColor: 'transparent'
+                                            
+                                        }}>{prompt}</ul>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <VideoCard 
+                                            videoUrl={urlMap.get(prompt)[0][0]} 
+                                            title={urlMap.get(prompt)[0][1]}
+                                        />
+                                        <VideoCard 
+                                            videoUrl={urlMap.get(prompt)[1][0]} 
+                                            title={urlMap.get(prompt)[1][0]}
+                                        />
+                                            </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
         // loads this content page
         // background

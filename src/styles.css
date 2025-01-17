@@ -191,6 +191,13 @@ p {
 
 }
 
+.bottom-frame {
+  height: 30vh;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
 .frame .overlap-group {
   height: 140px;
   left: calc(40vw + 170px);
@@ -250,38 +257,56 @@ p {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
   font-size: 51px;
-  font-weight: 400;
-  left: calc(40vw + 144px);
+  font-weight: 900;
+  left: calc(40vw + 140px);
   letter-spacing: 0;
-  line-height: 60px;
+  line-height: 20px;
   position: absolute;
   top: calc(35% + 84px);
   width: 561px;
 }
 
+.text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Reenie Beanie", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: calc(40vw + 310px);
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  top: calc(35% + 120px);
+  width: 561px;
+}
+
 .frame .buttons-secondary-fixed-button {
   height: 100px !important;
-  left: calc(40vw + 190px) !important;
+  left: calc(40vw + 275px) !important;
   position: absolute !important;
-  top: calc(35% + 185px) !important;
+  top: calc(35% + 180px) !important;
   width: 270px !important;
-  background-color: var(--x01-fill-03-soft) !important;
-  border-radius: 4px;
+  background-color: var(--x01-fill-04-softest) !important;
+  border-radius: 20px;
   cursor: pointer;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.frame .buttons-secondary-fixed-button:hover {
+  transform: scale(1.02);
 }
 
 .frame .buttons-secondary-instance {
   color: var(--x01-fill-01-dark);
   font-family: "Reenie Beanie", Helvetica !important;
-  font-size: 51px !important;
+  font-size: 45px !important;
   font-weight: 400 !important;
   text-align: center;
   position: relative;
-  top: 0px;
+  top: 1px;
 }
 
 .frame .buttons-primary-fixed-button {
@@ -310,10 +335,10 @@ p {
 }
 
 .frame .icons-primary {
-  height: 16px !important;
-  left: calc(40vw + 488px) !important;
+  height: 25px !important;
+  left: calc(40vw + 220px) !important;
   position: absolute !important;
-  top: calc(35% + 230px) !important;
+  top: calc(35% + 215px) !important;
   width: 16px !important;
 }
 
@@ -452,10 +477,10 @@ a {
   line-height: 60px;
   text-align: center;
   width: 306px;
-  position: fixed;
+  position: absolute;
   left: 50%;
-  top: 75vh;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .scroll-arrow {
@@ -483,7 +508,6 @@ a {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  margin-top: 30vh;
 }
 
 .content-page-div {
@@ -558,16 +582,16 @@ a {
 .content-page .text-wrapper-3 {
   color: #000000;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 400;
-  left: 328px;
+  left: 230px;
   letter-spacing: 0;
   line-height: 60px;
   position: absolute;
   text-align: center;
   text-shadow: 0px 4px 4px #00000040;
   top: 28px;
-  width: 604px;
+  width: 800px;
 }
 
 .content-page .overlap-group-2 {
@@ -650,10 +674,11 @@ a {
 .video-title {
   color: var(--x01-fill-01-dark);
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
   text-align: center;
   margin-bottom: 15px;
+  padding: 10px;
 }
 
 .video-link {
