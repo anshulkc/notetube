@@ -10,7 +10,7 @@ import fs from 'fs';
 
 
 const app = express();
-app.use(cors());
+app.use(cors()); // for cross origin requests
 
 const openaiKey = process.env.OPENAI_API_KEY
 const openai = new OpenAI({ apiKey: openaiKey });
@@ -18,17 +18,18 @@ const openai = new OpenAI({ apiKey: openaiKey });
 const exaaiKey = process.env.EXA_API_KEY
 const exa = new Exa(exaaiKey);
 
-
+// exa ai helper function to delay requests to not overload the api
 const delay = (ms) => {
     new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
+// multer storage for local file uploads
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, './uploads');
+        cb(null, './uploads'); // directory for the file uploads
     },
     filename: function (req, file, cb) {
+        // generate a unique filename for the file with the generic multer way of doing it
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
         cb(null, uniqueSuffix + '-' + file.originalname);
 
@@ -36,7 +37,9 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage })
 
-
+// I have two endpoints here, the upload endpoint and the process-image endpoint
+// the upload endpoint is just for testing, it returns the file that was uploaded
+// the process-image endpoint is the one that does the actual processing
 app.post('/api/upload', upload.single('avatar'), (req, res) => {
     res.json(req.file);
 });
@@ -51,9 +54,10 @@ const filePath = req.file.path;
 
 let imageToProcess = filePath;
 
+// convert the image to base64
 const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
 
-
+// first open ai requests simply extracts the text from the image
  try {
   const first_response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -74,6 +78,7 @@ const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
       ],
     });
 
+    // second open ai request extracts the topics from the text
     const response = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
@@ -92,9 +97,10 @@ const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
     const topics_string = response.choices[0].message.content;
     const questions = topics_string.split("\n");
 
-    // setPrompts(questions);
+    // create a map to store the questions and the youtube links
     const urlMap = new Map();
     
+    // for each question, search for the most relevant youtube videos using exa ai
       for (const question of questions) {
           try {
               const result = await exa.search(
@@ -116,7 +122,7 @@ const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
 
               for (const output of exa_json) {
                   // take this url and turn it into a preview video on the website (loads in new tab)
-                  list_links.push([output.url, (output.title).split(' ').slice(0, 10).join(' ')])
+                  list_links.push([output.url, (output.title).split(' ').slice(0, 8).join(' ')])
                   await delay(200);
               }   
               urlMap.set(question, list_links)                 
