@@ -2,7 +2,7 @@
 
 ## Overview
 
-Learn your notes into Youtube videos with a single click!
+Turn your notes into Youtube videos with a single click!
 
 ## Installation
 
