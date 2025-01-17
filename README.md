@@ -16,4 +16,6 @@ EXA_API_KEY='...'
 
 ## How to use:
 
-Click the button that says upload and select a file (must adhere to the specific file format requirements)
+1. Click the button that says upload and select a file (must adhere to the specific file format requirements). If you have a PDF, take a screenshot of those notes and upload them.
+2. Wait for the backend to render the youtube links based on AI-generated topics of the notes
+3. Enjoy the YouTube-generated content!
