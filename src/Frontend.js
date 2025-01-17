@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import  './styles.css'
 import { FileUpload } from './FileUpload.js'
 
+{/* not using this .js anymore */}
+
 export function FrontPage( { handleSuccessfulUpload }) {
 
     const toBase64 = async (filePath) => {

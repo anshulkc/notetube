@@ -21,7 +21,9 @@ function MainPage() {
 
     return (
         <>
-            <Frame handleSuccessfulUpload={successfulUpload}/>
+            <Frame 
+                handleSuccessfulUpload={successfulUpload}
+                />
             {isImageUploaded && <ImprovedContentPage  prompts={prompts} urlMap={urlMap}/> }
            {/* <FrontPage handleSuccessfulUpload={successfulUpload} /> */}
             {/* isImageUploaded && <ContentPage handleSuccessfulUpload={successfulUpload} prompts={prompts} urlMap={urlMap}/> */}

@@ -2,6 +2,8 @@ import { React } from 'react';
 import { FileUpload } from './FileUpload.js'
 import  './styles.css'
 
+{/* not using this .js anymore */}
+
 
 export function ContentPage( { handleSuccessfulUpload, prompts, urlMap }) {
 

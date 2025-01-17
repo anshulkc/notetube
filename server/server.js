@@ -123,14 +123,14 @@ const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
               for (const output of exa_json) {
                   // take this url and turn it into a preview video on the website (loads in new tab)
                   list_links.push([output.url, (output.title).split(' ').slice(0, 8).join(' ')])
-                  await delay(200);
+                  await delay(200); // delay to not overload the api
               }   
               urlMap.set(question, list_links)                 
           } catch (error) {
               if (error.message.includes('429')) {
                   console.log('Rate limit reached, wait 1 second before requesting again')
               }
-              await delay(1000);
+              await delay(1000); // implemented just in case the 200 millisecond delay is not enough (exa requires 1 second delay per 5 requests)
           }
         }
 

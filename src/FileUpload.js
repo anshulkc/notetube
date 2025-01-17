@@ -4,24 +4,24 @@ export function FileUpload({ onSuccessfulUpload }) {
     const [uploading, setUploading] = useState(false);
 
    const handleFileChange = async (e) => {
-       const file = e.target.files[0];
+       const file = e.target.files[0]; // get the file that was uploaded
        setUploading(true);
        if (!file) return;
 
        const formData = new FormData();
-       formData.append('avatar', file);
+       formData.append('avatar', file); // append the file to the form data
 
        try {
-           const response = await fetch('http://localhost:3001/api/upload', {
+           const response = await fetch('http://localhost:3001/api/upload', { // endpoint 1
                method: 'POST',
-               body: formData
+               body: formData // send the form data to the server
            });
            const data = await response.json();
            console.log('Success: ', data);
            
-           const process_image = await fetch('http://localhost:3001/process-image', {
+           const process_image = await fetch('http://localhost:3001/process-image', { //endpoint 2
                method: 'POST',
-               body: formData
+               body: formData // send the form data to the server
            });
            const image_data = await process_image.json();
            console.log('Success: ', image_data);
@@ -30,7 +30,7 @@ export function FileUpload({ onSuccessfulUpload }) {
            console.log('Did not work: ', error);
        } finally {
         setUploading(false);
-        e.target.value = '';
+        e.target.value = ''; // reset the file input to allow for another upload
        }
    };
   
