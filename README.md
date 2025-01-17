@@ -6,7 +6,7 @@ Learn your notes into Youtube videos with a single click!
 
 ## Installation
 
-
+Install all of the dependencies in terminal with: 'npm install express multer cors dotenv openai exa-js fs react'
 
 ## How to use:
 
