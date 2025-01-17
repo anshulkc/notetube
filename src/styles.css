@@ -199,8 +199,8 @@ p {
 }
 
 .frame .overlap-group {
-  height: 140px;
-  left: calc(40vw + 170px);
+  height: 200px;
+  left: calc(40vw + 437px);
   transform: translate(-248px, -50%);
   position: absolute;
   top: 35%;
@@ -210,13 +210,13 @@ p {
 .frame .div {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 102px;
+  font-size: 120px;
   font-weight: 400;
-  left: 0;
+  left: -5px;
   letter-spacing: 0;
   line-height: 20px;
   position: absolute;
-  top: 45px;
+  top: 5px;
   width: 409px;
 }
 
@@ -230,27 +230,27 @@ p {
 .frame .text-wrapper-2 {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 102px;
+  font-size: 120px;
   font-weight: 400;
-  left: calc(40vw - 467px);
+  left: calc(40vw - 270px);
   letter-spacing: 0;
   line-height: 20px;
   position: absolute;
-  top: calc(35% - 35px);
-  width: 387px;
+  top: calc(35% - 100px);
+  width: 500px;
 }
 
 .frame .p {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 400;
-  left: calc(40vw + 514px);
+  left: calc(40vw - 200px);
   letter-spacing: 0;
   line-height: 40px;
   position: absolute;
-  top: calc(35% - 85px);
-  width: 406px;
+  top: calc(35% - 25px);
+  width: 1200px;
 }
 
 .frame .text-wrapper-3 {
@@ -258,7 +258,7 @@ p {
   font-family: "Reenie Beanie", Helvetica;
   font-size: 51px;
   font-weight: 900;
-  left: calc(40vw + 140px);
+  left: calc(40vw - 115px);
   letter-spacing: 0;
   line-height: 20px;
   position: absolute;
@@ -269,21 +269,21 @@ p {
 .text-wrapper-5 {
   color: #ffffff;
   font-family: "Reenie Beanie", Helvetica;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
-  left: calc(40vw + 310px);
-  letter-spacing: 0;
+  left: calc(40vw + 5px);
+  letter-spacing: 0.5px;
   line-height: 60px;
   position: absolute;
-  top: calc(35% + 120px);
+  top: calc(35% + 250px);
   width: 561px;
 }
 
 .frame .buttons-secondary-fixed-button {
   height: 100px !important;
-  left: calc(40vw + 275px) !important;
+  left: calc(40vw + 20px) !important;
   position: absolute !important;
-  top: calc(35% + 180px) !important;
+  top: calc(35% + 140px) !important;
   width: 270px !important;
   background-color: var(--x01-fill-04-softest) !important;
   border-radius: 20px;
@@ -302,7 +302,7 @@ p {
 .frame .buttons-secondary-instance {
   color: var(--x01-fill-01-dark);
   font-family: "Reenie Beanie", Helvetica !important;
-  font-size: 45px !important;
+  font-size: 50px !important;
   font-weight: 400 !important;
   text-align: center;
   position: relative;
@@ -336,7 +336,7 @@ p {
 
 .frame .icons-primary {
   height: 25px !important;
-  left: calc(40vw + 220px) !important;
+  left: calc(40vw + 0px) !important;
   position: absolute !important;
   top: calc(35% + 215px) !important;
   width: 16px !important;
@@ -531,7 +531,7 @@ a {
   height: 188px;
   left: 217px;
   position: absolute;
-  top: 124px;
+  top: 144px;
   width: 327px;
 }
 
@@ -560,7 +560,7 @@ a {
   height: 187px;
   left: 708px;
   position: absolute;
-  top: 124px;
+  top: 144px;
   width: 327px;
 }
 

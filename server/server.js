@@ -105,7 +105,8 @@ const imageBase64 = fs.readFileSync(req.file.path).toString('base64');
           
                   {
                       type: "neural",
-                      numResults: 2 // in the future, could change to be user-chosen
+                      numResults: 2, // in the future, could change to be user-chosen
+                      includeDomains:["youtube.com"],
                   }
               );
 
