@@ -86,12 +86,6 @@ const imageBase64 = fs.readFileSync(req.file.path).toString('base64');
         ],
     });
 
-    try {
-      console.log(response.choices[0].message.content);
-    } catch {
-      console.log("error: ", error);
-    }
-
     const topics_string = response.choices[0].message.content;
     const questions = topics_string.split("\n");
 

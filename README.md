@@ -16,6 +16,7 @@ EXA_API_KEY='...'
 
 ## How to use:
 
-1. Click the button that says upload and select a file (must adhere to the specific file format requirements). If you have a PDF, take a screenshot of those notes and upload them.
-2. Wait for the backend to render the youtube links based on AI-generated topics of the notes
-3. Enjoy the YouTube-generated content!
+1. In your terminal, type 'npm run dev' to start the open the website in your browser.
+2. Click the button that says upload and select a file (must adhere to the specific file format requirements). If you have a PDF, take a screenshot of those notes and upload them.
+3. Wait for the backend to render the youtube links based on AI-generated topics of the notes
+4. Enjoy the YouTube-generated content!

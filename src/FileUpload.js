@@ -30,6 +30,7 @@ export function FileUpload({ onSuccessfulUpload }) {
            console.log('Did not work: ', error);
        } finally {
         setUploading(false);
+        e.target.value = '';
        }
    };
   
