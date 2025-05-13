@@ -30,7 +30,7 @@ export function FileUpload({ onUploadStart, onProcessingUpdate, onSuccessfulUplo
        
        try {
            // Fetch from the process-image endpoint
-           const response = await fetch('http://localhost:3001/process-image', { 
+           const response = await fetch('/process-image', { 
                method: 'POST',
                body: formData // send the form data to the server
            });

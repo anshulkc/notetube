@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.35cea31a.css",
+    "main.js": "/static/js/main.2c4dad32.js",
+    "static/media/fruktur-italic-webfont.woff": "/static/media/fruktur-italic-webfont.b89e16adc2e0c2a8d29d.woff",
+    "static/media/fruktur-regular-webfont.woff": "/static/media/fruktur-regular-webfont.ab4fdedd203237244416.woff",
+    "static/media/fruktur-italic-webfont.woff2": "/static/media/fruktur-italic-webfont.9e854e738a6b08aafef7.woff2",
+    "static/media/fruktur-regular-webfont.woff2": "/static/media/fruktur-regular-webfont.df35bd12333c896c4003.woff2",
+    "index.html": "/index.html",
+    "main.35cea31a.css.map": "/static/css/main.35cea31a.css.map",
+    "main.2c4dad32.js.map": "/static/js/main.2c4dad32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35cea31a.css",
+    "static/js/main.2c4dad32.js"
+  ]
+}
