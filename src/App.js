@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import  './styles.css'
-import { FrontPage } from './Frontend.js'
-import { ContentPage } from './ContentPage.js'
 import { Frame } from './ImprovedLanding.js'
 import { ImprovedContentPage } from './ImprovedContentPage.js'
 
