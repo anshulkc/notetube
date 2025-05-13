@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {LoadingSpinner} from './LoadingSpinner.js';
 import './styles.css';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3001';
+
 export function FileUpload({ onUploadStart, onProcessingUpdate, onSuccessfulUpload, onError }) {
     const [uploading, setUploading] = useState(false);
 
@@ -30,7 +32,7 @@ export function FileUpload({ onUploadStart, onProcessingUpdate, onSuccessfulUplo
        
        try {
            // Fetch from the process-image endpoint
-           const response = await fetch('/process-image', { 
+           const response = await fetch(`${API_BASE_URL}/process-image`, { 
                method: 'POST',
                body: formData // send the form data to the server
            });
@@ -45,7 +47,7 @@ export function FileUpload({ onUploadStart, onProcessingUpdate, onSuccessfulUplo
            let decoder = new TextDecoder();
            let buffer = '';
            let finalData = null;
-           
+
            while (true) {
                const { done, value } = await reader.read();
                
