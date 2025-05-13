@@ -31,6 +31,14 @@ export const Frame = ({ handleSuccessfulUpload }) => {
     }, 5000);
   };
 
+  // Map stages to readable text
+  const statusText = {
+    'uploading': 'Uploading your files...',
+    'reading': 'Reading text from your images...',
+    'analyzing': 'Analyzing topics in your notes...',
+    'searching': 'Finding relevant YouTube videos...'
+  };
+
   return (
     <>
       <div className="frame">
@@ -59,6 +67,15 @@ export const Frame = ({ handleSuccessfulUpload }) => {
           onSuccessfulUpload={handleUploadComplete} 
           onError={handleUploadError}
         />
+        
+        {processingStage && processingStage !== 'complete' && (
+          <div className="progress-overlay">
+            <div className="progress-status">
+              <div className="progress-spinner"></div>
+              <p>{statusText[processingStage]}</p>
+            </div>
+          </div>
+        )}
       
       </div>
       {processingStage === 'complete' && (
