@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node server/server.js",
+    "server": "nodemon server/server.js",
     "client": "npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -28,7 +28,7 @@
     "concurrently": "^9.1.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "nodemon": "^3.1.9",
+    "nodemon": "^3.1.10",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "webpack": "^5.75.0",

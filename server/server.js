@@ -24,25 +24,28 @@ const delay = (ms) => {
 }
 
 // multer storage for local file uploads
-const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, './uploads'); // directory for the file uploads
-    },
-    filename: function (req, file, cb) {
-        // generate a unique filename for the file with the generic multer way of doing it
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-        cb(null, uniqueSuffix + '-' + file.originalname);
+// const storage = multer.diskStorage({
+//     destination: function(req, file, cb) {
+//         cb(null, './uploads'); // directory for the file uploads
+//     },
+//     filename: function (req, file, cb) {
+//         // generate a unique filename for the file with the generic multer way of doing it
+//         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+//         cb(null, uniqueSuffix + '-' + file.originalname); 
 
-    },
-});
+//     },
+// });
+
+const storage = multer.memoryStorage();
 const upload = multer({ storage })
 
 // I have two endpoints here, the upload endpoint and the process-image endpoint
 // the upload endpoint is just for testing, it returns the file that was uploaded
 // the process-image endpoint is the one that does the actual processing
-app.post('/api/upload', upload.single('avatar'), (req, res) => {
-    res.json(req.file);
-});
+
+// app.post('/api/upload', upload.single('avatar'), (req, res) => {
+//     res.json(req.file);
+// });
 
 app.post('/process-image', upload.single('avatar'), async (req, res) => {
     
@@ -50,12 +53,17 @@ app.post('/process-image', upload.single('avatar'), async (req, res) => {
     throw new Error('OpenAI API key is not set');
 }
 
-const filePath = req.file.path;
+// const filePath = req.file.path;
+const fileBuffer = req.file.buffer;
 
-let imageToProcess = filePath;
+// let imageToProcess = fileBuffer;
 
 // convert the image to base64
-const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
+// const imageBase64 = fs.readFileSync(imageToProcess).toString('base64');
+
+// conver the buffer to base64
+const imageBase64 = fileBuffer.toString('base64');
+
 
 // first open ai requests simply extracts the text from the image
  try {
