@@ -7,11 +7,18 @@ import 'dotenv/config';
 import Exa from "exa-js";
 import { fromBuffer } from "pdf2pic";
 import fs from 'fs';
+import path from 'path'; // <-- Add this
+import { fileURLToPath } from 'url'; // <-- Add this
 
 
+const __filename = fileURLToPath(import.meta.url); // <-- Add this
+const __dirname = path.dirname(__filename); // <-- Add this
 
 const app = express();
 app.use(cors()); // for cross origin requests
+
+app.use(express.static(path.join(__dirname, '..', 'build'))); // <-- Add this
+
 
 const openaiKey = process.env.OPENAI_API_KEY
 const openai = new OpenAI({ apiKey: openaiKey });
@@ -222,6 +229,10 @@ app.post('/process-image', upload.array('avatars', 100), async (req, res) => {
     res.end();
   }
 });
+
+app.get('*', (req, res) => { // <-- Add this
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html')); // <-- Add this
+  }); // <-- Add this
 
 const port = process.env.PORT || 3001;
 
