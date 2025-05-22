@@ -1,8 +1,8 @@
 # NoteTube!
 
 Deployed app: https://notetube-adce0352fefc.herokuapp.com/
---> *CURRENTLY WORKS ONLY WITH SCREENSHOTS ON DEPLOYED APP.*
---> PDF works when ran locally, heroku-related integration problems for PDF due to dependency issues. Fix coming soon.
+- **CURRENTLY WORKS ONLY WITH SCREENSHOTS ON DEPLOYED APP.**
+- *PDF works when ran locally, heroku-related integration problems for PDF due to dependency issues. Fix coming soon.*
 
 ## Overview
 
