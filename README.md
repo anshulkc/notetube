@@ -1,5 +1,9 @@
 # NoteTube!
 
+<img width="1196" height="558" alt="image" src="https://github.com/user-attachments/assets/f013c802-3160-4b6b-b4c7-3fabffbe31e8" />
+
+---
+
 
 - Note: **CURRENTLY WORKS ONLY WITH SCREENSHOTS ON DEPLOYED APP.**
 - Deployed app: https://notetube-adce0352fefc.herokuapp.com/
